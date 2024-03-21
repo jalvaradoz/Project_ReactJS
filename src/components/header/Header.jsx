@@ -11,11 +11,9 @@ const Header = ({title}) => {
             <div className="relative w-full px-5 py-5">
                 <ThemeSwitch/>
                 <a href="" className="absolute left-24 sm:left-2/4 top-9 -translate-x-2/4 -translate-y-2/4 text-[color:var(--black-50)] [font-family:var(--cursive)] mainLogo text-2xl sm:text-3xl md:text-5xl xl:text-6xl tracking-wider">{title}</a>
-                <div>
-                    <SearchWidget/>
-                    <UserWidget/>
-                    <CartWidget/>
-                </div>
+                <SearchWidget/>
+                <UserWidget/>
+                <CartWidget/>
             </div>
         </div>
     )

@@ -206,6 +206,10 @@ body{
     background-color: transparent;
     transition:all .4s linear;
 }
+.userIcon svg{
+    height: 30px;
+    width: 30px;
+}
 .userIcon:hover{
     background-color: var(--black-400);
     box-shadow: var(--box-black);
@@ -223,8 +227,33 @@ body{
     right: 130px;
     padding: 12px;
 }
+.searchIcon svg{
+    height: 24px;
+    width: 24px;
+}
 
-
+@media screen and (max-width: 420px){
+    .userIcon{
+        right: 60px;
+    }
+    .cartIcon{
+        right: 8px;
+    }
+    .searchIcon{
+        right: 113px;
+    }
+    .userIcon, .searchIcon{
+        top: 15px;
+    }
+    .userIcon svg{
+        height: 26px;
+        width: 26px;
+    }
+    .searchIcon svg{
+        height: 20px;
+        width: 20px;
+    }
+}
 
 /*-----form overlay------------------*/
 

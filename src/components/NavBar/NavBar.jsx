@@ -6,12 +6,12 @@ const NavBar = () => {
             </div>
             <div>
                 <nav>
-                    <ul class="flex flex-wrap justify-evenly w-full">
-                        <li className="hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-24"><a href="">Women</a></li>
-                        <li className="hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-[3.2rem] md:-translate-x-5"><a href="">Men</a></li>
-                        <li className="hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:translate-x-[28px]"><a href="">Home</a></li>
-                        <li className="hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-12 md:translate-x-9"><a href="">Collections</a></li>
-                        <li className="hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-[6.7rem]"><a href="">Contact</a></li>
+                    <ul className="flex flex-wrap justify-evenly w-full">
+                        <li className="absolute top-56 left-1 md:static hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-24"><a href="">Women</a></li>
+                        <li className="absolute top-[17rem] left-20 md:static hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-[3.2rem] md:-translate-x-5"><a href="">Men</a></li>
+                        <li className="absolute md:static hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:translate-x-[28px]"><a href="">Home</a></li>
+                        <li className="absolute top-[17rem] right-8 md:static hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-12 md:translate-x-9"><a href="">Collections</a></li>
+                        <li className="absolute top-56 right-2 md:static hover:bg-[--black-600] rounded-3xl p-1 px-2 transition duration-300 ease-in-out md:-translate-y-[6.7rem]"><a href="">Contact</a></li>
                     </ul>
                 </nav>
             </div>
