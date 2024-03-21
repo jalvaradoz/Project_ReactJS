@@ -224,6 +224,8 @@ body{
     padding: 12px;
 }
 
+
+
 /*-----form overlay------------------*/
 
 .logOverlay, #cartOverlay {
@@ -377,9 +379,8 @@ body{
     transition: var(--transition-theme);
 }
 .mainBgImage{
-    background-image: url(../assets/img/banners/mainBanner.webp);
-    width: auto;
-    height: 710px;
+    background-image: url(../img/banners/mainBanner.webp);
+    aspect-ratio: 16/9;
     background-size: cover;
     background-repeat: no-repeat;
 }
