@@ -1,4 +1,6 @@
-const Banner = ({promo}) => {
+import './banners.css'
+
+const PromoBanner = ({promo}) => {
     return (
         <>
             <section id="mainHightLight">
@@ -12,4 +14,4 @@ const Banner = ({promo}) => {
     )
 }
 
-export default Banner
+export default PromoBanner

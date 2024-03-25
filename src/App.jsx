@@ -1,17 +1,25 @@
 import './App.css'
 import Header from './components/header/Header'
 import NavBar from './components/NavBar/NavBar'
-import Banner from './components/banner/Banner'
+import PromoBanner from './components/banners/PromoBanner'
 import ItemsListContainer from './components/itemsListContainer/ItemsListContainer'
+import MainBanners from './components/banners/MainBanners'
+import MidTitles from './components/midTitles/MidTitles'
+import TopSellers from './components/mainSections/TopSellers'
+
+
 
 function App() {
 
   return (
     <>
-      <Header title= "Alter Jewelry"/>
-      <NavBar/>
-      <Banner promo= 'new collections available'/>
+      <Header />
+      <NavBar />
+      <PromoBanner promo= 'new collections available'/>
       <ItemsListContainer greeting='Hello World!'/>
+      <MidTitles midTitle={'Top sellers'}/>
+      <TopSellers />
+      <MainBanners src={'../img/banners/faunMain.webp'} alt={'faunCollection'}/>
     </>
   )
 }

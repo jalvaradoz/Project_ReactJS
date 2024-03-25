@@ -43,7 +43,7 @@
 
 }
 .light{
-    --bg:var(--black-50);
+    --bg:var(--black-100);
     --bg-items: var(--black-900);
     --text: var(--black-950);
     --shadow: var(--box-white);
@@ -164,9 +164,6 @@ body{
 .themeSwitch{
     box-shadow: var(--shadow);
     outline: none;
-}
-.mainLogo{
-    transition: var(--transition-theme);
 }
 @keyframes off {
     0% {transform: translateX(40px);width: 20px;}
@@ -407,23 +404,7 @@ body{
     clip-path: polygon(50% 0px, 100% 0px, 100% 32.08%, 50% 100%, 0px 37.92%, 0px 0px);
     transition: var(--transition-theme);
 }
-.mainBgImage{
-    background-image: url(../img/banners/mainBanner.webp);
-    aspect-ratio: 16/9;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-@media screen and (min-width: 2000px) {
-    .bgImageDiv{
-        display: flex;
-        justify-content: center;
-    }
-    .bgImageDiv .mainBgImage{
-        height: 900px;
-        width: 1500px;
-        border-radius: 2rem;
-    }
-}
+
 
 /*---------------Sign up page---------------*/
 
@@ -434,113 +415,8 @@ body{
 /*--------------- Products ---------------*/
 
 
-.productPreview{
-    position: relative;
-    width: 250px;
-    height: 250px;
-    margin-bottom: 50px;
-    transition: all .3s ease-in-out;
-}
-.productPreview:hover .CartBtn{
-    opacity: 1;
-}
-.productPreview .CartBtn{
-    opacity: 0;
-    display: flex;
-    width: 140px;
-    height: 40px;
-    border-radius: 2rem;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.306);
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition-duration: .5s;
-    overflow: hidden;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: cartBtn .3s linear;
-}
-.productPreview .CartBtn:hover .IconContainer{
-    transform: translateX(60px);
-    border-radius: 40px;
-    transition-duration: .5s;
-}
-.productPreview .CartBtn:hover .text{
-    transform: translate(10px,0px);
-    transition-duration: .5s;
-}
-.productPreview .CartBtn:active{
-    transform: scale(0.9) translate(-55%, -10%);
-}
-.productPreview .CartBtn svg{
-    fill: var(--black-50);
-}
-.productPreview .CartBtn .IconContainer{
-    position: absolute;
-    left: -50px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border-radius: 50%;
-    color: var(--black-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: .5s;
-}
-.productPreview .CartBtn .text{
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--black-50);
-    transition-duration: .5s;
-    font-size: .8rem;
-    font-weight: 600;
-}
 
-.productTitle{
-    text-align: center;
-}
-.productPrice{
-    text-align: center;
-}
-@keyframes cartBtn{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.imageContainer{
-    position: relative;
-    width: auto;
-    height: 100%;
-    margin-bottom: 1rem;
-}
-.imageContainer:hover .mainImage{
-    opacity: 0;
-    transform: scale(0.95);
-}
-.imageContainer:hover .backImage{
-    opacity: 1;
-    transform: scale(1);
-}
-.imageContainer .mainImage{
-    border-radius: 2rem;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.imageContainer .backImage{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 2rem;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
+
 .bin-button {
     display: flex;
     flex-direction: column;
