@@ -1,0 +1,36 @@
+#cartOverlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: overAnimation .5s linear;
+}
+#cart{
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    animation: cartAnimation .5s linear;
+}
+#cartOverlay #cart h2{
+    font-family: var(--cursive);
+}
+#cartOverlay #cart .mainBtn{
+    width: 180px;
+    height: 50px;
+}
+#cartOverlay #cart .cancelBtn{
+    width: 180px;
+    height: 50px;
+}
+#cartOverlay #cart .cancelBtn:hover .icon{
+    transform: translateX(0);
+}
+#cartOverlay #cart .cancelBtn .icon{
+    transform: translateX(50px) translateY(0);
+
+}
+@keyframes cartAnimation {
+    0%{right: -100%;}
+    100%{right:0;}
+}
+@media screen and (max-width: 640px){
+    #cart{
+        border-radius: 2rem;
+    }
+}

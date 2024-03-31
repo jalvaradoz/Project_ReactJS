@@ -6,11 +6,14 @@ import ItemsListContainer from './components/itemsListContainer/ItemsListContain
 import MainBanners from './components/banners/MainBanners'
 import MidTitles from './components/midTitles/MidTitles'
 import TopSellers from './components/mainSections/TopSellers'
+import Footer from './components/footer/Footer'
 
 
 
 function App() {
 
+
+  
   return (
     <>
       <Header />
@@ -20,6 +23,7 @@ function App() {
       <MidTitles midTitle={'Top sellers'}/>
       <TopSellers />
       <MainBanners src={'../img/banners/faunMain.webp'} alt={'faunCollection'}/>
+      <Footer />
     </>
   )
 }

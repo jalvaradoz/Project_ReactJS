@@ -31,7 +31,7 @@
     /* --Box Shadow, Light: */
     --box-white:0px 0px 20px 5px #00000059;
 
-    --transition-theme: background .5s ease-in-out, color 1s ease-in-out;
+    --transition-theme: background .5s ease-in-out, color .5s ease-in-out;
 }
 
 .dark{
@@ -159,126 +159,12 @@ body{
     width: 12px;
 }
 
-/*------ header ------*/
-
-.themeSwitch{
-    box-shadow: var(--shadow);
-    outline: none;
-}
-@keyframes off {
-    0% {transform: translateX(40px);width: 20px;}
-    50% {width: 25px;border-radius: 25px;}
-    100% {transform: translateX(0px);width: 20px;}
-}
-@keyframes on {
-    0% {transform: translateX(0px);width: 20px;}
-    50% {width: 25px;border-radius: 25px;}
-    100% {transform: translateX(35px);width: 20px;}
-}
-@keyframes sun {
-    0% {transform: rotate(170deg);background-color: transparent;box-shadow: 5px -1px 0px #fff;filter: blur(0px);}
-    50% {background-color: transparent;box-shadow: 5px -1px 0px #fff;filter: blur(0px);}
-    90% {background-color: #f5daaa;box-shadow: 0px 0px 10px #f5deb4,0px 0px 20px #f5deb4,0px 0px 30px #f5deb4, inset 0px 0px 2px #efd3a3;filter: blur(1px);}
-    100% {transform: rotate(0deg);background-color: #f5daaa;box-shadow: 0px 0px 10px #f5deb4,0px 0px 20px #f5deb4,0px 0px 30px #f5deb4, inset 0px 0px 2px #efd3a3;filter: blur(1px);}
-}
-@keyframes moon {
-    0% {transform: rotate(0deg);filter: blur(1px);}
-    50% {filter: blur(1px);}
-    90% {background-color: transparent;box-shadow: 5px -1px 0px #fff;filter: blur(0px);}
-    100% {transform: rotate(170deg);background-color: transparent;box-shadow: 5px -1px 0px #fff;filter: blur(0px);}
-}
-.userIcon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    cursor: pointer;
-    right: 70px;
-    top: 12.5px;
-    padding: 9.5px;
-    outline: none;
-    border: 1px solid var(--black-800);
-    border-radius: 2rem;
-    pointer-events: painted;
-    background-color: transparent;
-    transition:all .4s linear;
-}
-.userIcon svg{
-    height: 30px;
-    width: 30px;
-}
-.userIcon:hover{
-    background-color: var(--black-400);
-    box-shadow: var(--box-black);
-}
-.userIcon:hover svg{
-    stroke: var(--black-50);
-}
-.userIcon:hover svg path{
-    stroke: var(--black-50);
-}
-.cartIcon{
-    right: 12px;
-}
-.searchIcon{
-    right: 130px;
-    padding: 12px;
-}
-.searchIcon svg{
-    height: 24px;
-    width: 24px;
-}
-
-@media screen and (max-width: 420px){
-    .userIcon{
-        right: 60px;
-    }
-    .cartIcon{
-        right: 8px;
-    }
-    .searchIcon{
-        right: 113px;
-    }
-    .userIcon, .searchIcon{
-        top: 15px;
-    }
-    .userIcon svg{
-        height: 26px;
-        width: 26px;
-    }
-    .searchIcon svg{
-        height: 20px;
-        width: 20px;
-    }
-}
 
 /*-----form overlay------------------*/
 
-.logOverlay, #cartOverlay {
+.logOverlay {
     background-color: rgba(0, 0, 0, 0.7);
     animation: overAnimation .5s linear;
-}
-#cartOverlay #cart{
-    border-top-left-radius: 4rem;
-    border-bottom-left-radius: 4rem;
-    animation: cartAnimation .5s linear;
-}
-#cartOverlay #cart h2{
-    font-family: var(--cursive);
-}
-#cartOverlay #cart .mainBtn{
-    width: 180px;
-    height: 50px;
-}
-#cartOverlay #cart .cancelBtn{
-    width: 180px;
-    height: 50px;
-}
-#cartOverlay #cart .cancelBtn:hover .icon{
-    transform: translateX(0);
-}
-#cartOverlay #cart .cancelBtn .icon{
-    transform: translateX(50px) translateY(0);
 }
 .logFormContainer {
     background-color: var(--black-900);
@@ -383,21 +269,10 @@ body{
     top: -15px;
     left: 20px;
 }
-@keyframes cartAnimation {
-    0%{right: -100%;}
-    100%{right:0;}
-}
-@media screen and (max-width: 640px){
-    #cart{
-        border-radius: 2rem;
-    }
-}
+
 
 /*------main-------- */
 
-.middleTitles{
-    font-family: var(--cursive);
-}
 .imgDivClip{
     background-color: var(--bg-items);
     height: 15rem;
@@ -460,9 +335,6 @@ body{
 .title{
     font-family: var(--cursive);
 }
-footer p{
-    font-family: var(--cursive);
-}
 #form-checkout {
     display: flex;
     flex-direction: column;
@@ -474,7 +346,4 @@ footer p{
     border: 1px solid rgb(118, 118, 118);
     border-radius: 2px;
     padding: 1px 2px;
-}
-.filter{
-    display: none;
 }

@@ -2,6 +2,7 @@ import CartWidget from "./CartWidget"
 import ThemeSwitch from "./ThemeSwitch"
 import UserWidget from "./UserWidget"
 import SearchWidget from "./SearchWidget"
+import './header.css'
 
 
 const Header = () => {
