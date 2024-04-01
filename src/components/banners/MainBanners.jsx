@@ -2,8 +2,8 @@ import React from 'react'
 
 const MainBanners = ({src,alt}) => {
     return (
-        <div className="mainBanners my-28">
-            <img src={src} alt={alt}/>
+        <div className="my-28">
+            <img className='rounded-3xl w-full object-cover' src={src} alt={alt}/>
         </div>
     )
 }

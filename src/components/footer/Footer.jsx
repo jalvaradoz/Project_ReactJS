@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-full px-10 pb-10">
-                <h4 className="text-center text-wrap">Project for educational purposes. Image and product credits go to my muse, 'Macabre Gadgets.' If you like the products you see, you can purchase them <a href="https://macabregadgets.com/" className="text-slate-400 hover:text-slate-500" target="_blank">HERE</a></h4>
+                <h4 className="text-center text-wrap">Project for educational purposes. Image and product credits go to my muse, 'Macabre Gadgets.' If you like the products you see, you can purchase them <a href="https://macabregadgets.com/" className="text-blue-gray-300 hover:text-blue-gray-500" target="_blank">HERE</a></h4>
             </div>
         </footer>
     )

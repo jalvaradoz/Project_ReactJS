@@ -6,6 +6,7 @@ import ItemsListContainer from './components/itemsListContainer/ItemsListContain
 import MainBanners from './components/banners/MainBanners'
 import MidTitles from './components/midTitles/MidTitles'
 import TopSellers from './components/mainSections/TopSellers'
+import MainFaun from './components/mainSections/MainFaun'
 import Footer from './components/footer/Footer'
 
 
@@ -18,11 +19,21 @@ function App() {
     <>
       <Header />
       <NavBar />
-      <PromoBanner promo= 'new collections available'/>
+      <PromoBanner />
       <ItemsListContainer greeting='Hello World!'/>
       <MidTitles midTitle={'Top sellers'}/>
       <TopSellers />
+      <MainBanners src={'img/banners/sirenMain.webp'} alt={'sirenCollection'}/>
+      
       <MainBanners src={'../img/banners/faunMain.webp'} alt={'faunCollection'}/>
+      <MainFaun />
+
+      <MainBanners src={'img/banners/ghostMain.webp'} alt={'ghostCollection'}/>
+
+      <MainBanners src={'img/banners/theaMain.webp'} alt={'theaCollection'}/>
+
+      <MainBanners src={'img/banners/vampireCollection.webp'} alt={'vampireCollection'}/>
+
       <Footer />
     </>
   )
