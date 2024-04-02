@@ -3,7 +3,7 @@ import React from 'react'
 const MainBanners = ({src,alt}) => {
     return (
         <div className="my-28">
-            <img className='rounded-3xl w-full object-cover' src={src} alt={alt}/>
+            <img className='rounded-3xl w-full object-cover aspect-video' src={src} alt={alt} width='auto' height='auto'/>
         </div>
     )
 }

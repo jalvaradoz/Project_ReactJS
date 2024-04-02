@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="bg-[--black-950] text-[--black-50] box-content">
+        <footer className="bg-[--black-950] text-[--black-50] box-content mt-28">
             <div className="flex flex-wrap justify-between items-center mb-10 md:mb-14 pt-10 px-8">
                 <p className="text-center w-full md:w-fit text-4xl [font-family:var(--cursive)]">ALTER JEWELRY</p>
                 <div className="mt-10 md:mt-0 w-full md:w-fit flex justify-evenly gap-7">

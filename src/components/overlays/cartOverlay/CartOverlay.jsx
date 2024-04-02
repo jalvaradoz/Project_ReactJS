@@ -1,4 +1,5 @@
 import React from 'react'
+import CancelButton from '../../buttons/CancelButton'
 import './cartOverlay.css'
 
 
@@ -29,10 +30,10 @@ const CartOverlay = ({cartToggle}) => {
                             </div>
                         </div>
                         <div className="flex flex-col gap-5 items-center w-full mb-10">
-                            <button type="button" className="bg-red-400 mainBtn rounded-3xl p-3" id="checkoutBtn">
+                            <button type="button" className="mainBtn rounded-3xl p-3" id="checkoutBtn">
                                 Checkout
                             </button>
-                            <button type="button" className="cancelBtn bg-green-400 rounded-3xl" onClick={cartToggle}><span className="text">Close</span><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+                            <CancelButton title={'Close'} />
                         </div>
                     </section>
                 </div>

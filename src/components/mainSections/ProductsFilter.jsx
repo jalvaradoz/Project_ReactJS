@@ -21,7 +21,7 @@ const ProductsFilter = ({ category }) => {
     }
 
     return (
-        <div className="flex flex-wrap gap-16 justify-center items-center mt-24 mx-7 max-w-full h-fit">
+        <div className="flex flex-wrap gap-16 justify-center items-center my-24 mx-7 max-w-full h-fit">
             {
                 productsFiltered.map(p=> (
                     <Item src1={p.image1} src2={p.image2} title={p.name} price={p.price} key={p.id}/>
