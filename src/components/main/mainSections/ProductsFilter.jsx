@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import products from '../data/getProducts'
-import Item from '../itemsListContainer/Item'
+import products from '../../data/getProducts'
+import Item from '../../itemsListContainer/Item'
 
 const ProductsFilter = ({ category }) => {
     const [productsData, setProductsData] = useState([])
@@ -10,14 +10,14 @@ const ProductsFilter = ({ category }) => {
         setProductsData(products)
     }, [])
 
-    const productsFiltered = productsData.filter(p => p.category.includes(category));
+    const productsFiltered = productsData.filter(p => p.category.includes(category))
 
     useEffect(() => {
         setLoadingError(productsFiltered.length === 0)
-    }, [category, productsData]);
+    }, [category, productsData])
 
     if (loadingError) {
-        return <h2 className='text-center text-5xl text-red-500 my-12'>Error Loading products, please refresh</h2>;
+        return <h2 className='text-center text-5xl text-red-500 my-12'>Error Loading products, please refresh</h2>
     }
 
     return (
