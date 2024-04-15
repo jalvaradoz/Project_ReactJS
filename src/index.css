@@ -167,7 +167,7 @@ body{
 
 .logOverlay {
     background-color: rgba(0, 0, 0, 0.7);
-    animation: overAnimation .5s linear;
+    animation: overAnimation .3s linear;
 }
 .logFormContainer {
     background-color: var(--black-900);

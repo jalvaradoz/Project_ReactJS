@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import CartOverlay from '../overlays/cartOverlay/CartOverlay'
 
-const productAdded = ({img,title,price}) => {
+const ProductAdded = ({img,title,price}) => {
 
     const [count, setCount] = useState(1)
 
@@ -43,4 +43,4 @@ const productAdded = ({img,title,price}) => {
     )
 }
 
-export default productAdded
+export default ProductAdded

@@ -4,19 +4,19 @@ import './cartOverlay.css'
 
 
 
-const CartOverlay = ({cartToggle}) => {
+const CartOverlay = ({toggleOverlay}) => {
 
-    const cartProducts = []
 
     return (
-        <section id="cartOverlay" className="fixed top-0 left-0 w-full h-full z-50 overflow-hidden">
+        <div id="cartOverlay" className="fixed top-0 left-0 w-full h-full z-[100] overflow-hidden">
             <div id="cart" className="absolute top-8 sm:top-0 right-0 h-[90%] sm:h-full w-full sm:w-[450px] bg-[--bg]">
                 <h2 className="text-center text-4xl sm:text-5xl my-7 sm:ml-4">Shopping Cart</h2>
                 <div className="sm:ml-4 flex flex-col justify-between h-[88%] sm:h-[92%]">
                     <div className="flex flex-col gap-5 h-[90%] p-5 overflow-auto" id="cartProductsAdded">
-                    {
-                        cartProducts.length < 1 && <p className="text-center">Your Cart is Empty</p> 
-                    }
+
+
+
+
                     </div>
                     <section className="cartFooter min-h-fit">
                         <div className="hidden" id="cartFooter">
@@ -33,12 +33,12 @@ const CartOverlay = ({cartToggle}) => {
                             <button type="button" className="mainBtn rounded-3xl p-3" id="checkoutBtn">
                                 Checkout
                             </button>
-                            <CancelButton title={'Close'} />
+                            <CancelButton title={'Close'} logic={toggleOverlay} />
                         </div>
                     </section>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
