@@ -63,6 +63,9 @@ body{
     font-family: var(--serif);
     transition: var(--transition-theme);
 }
+.dropMenu{
+    box-shadow: 0px 0px 20px 5px #00000059;
+}
 .btnShadow{
     box-shadow: 0px 8px 20px 5px #0000009d;
 }

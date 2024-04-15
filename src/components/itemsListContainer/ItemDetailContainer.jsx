@@ -4,7 +4,7 @@ const ItemDetailContainer = ({img,img2, title, price, details, stock, toggleView
 
     return (
         <div className='z-[80] h-full w-full logOverlay fixed top-0 left-0 '>
-            <div className='absolute bg-[--bg] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit max-h-[85%] min-w-[60%] w-[90%] md:w-fit rounded-3xl p-10'>
+            <div className='absolute bg-[--bg] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit max-h-[85%] min-w-[60%] w-[90%] md:w-fit rounded-3xl p-10 overflow-y-auto'>
                 <h1 className='text-center text-lg md:text-2xl lg:text-3xl'>{title}</h1>
                 <div className='flex flex-wrap gap-3 md:gap-10 justify-center w-full my-10'>
                     <div className='w-fit h-fit overflow-hidden rounded-3xl'>
