@@ -12,7 +12,7 @@ const Collections = () => {
     if(idCategory){
         return (
             <div>
-                <MainBanners src={`../public/img/banners/${idCategory}Collection.webp`} />
+                <MainBanners src={`/img/banners/${idCategory}Collection.webp`} />
                 <h1 className='text-center text-3xl md:text-5xl lg:text-8xl [font-family:--cursive] my-14'>Products</h1>
                 <ItemsListContainer category={idCategory} />
                 <MidTitles midTitle={'History'} />

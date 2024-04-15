@@ -1,5 +1,4 @@
 import './App.css'
-import useLoading from './hooks/useLoading'
 import Header from './components/header/Header'
 import NavBar from './components/NavBar/NavBar'
 import Index from './components/pages/Index'
@@ -14,14 +13,6 @@ import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
 
 
 function App() {
-
-  const {loading, toggleLoading, loadingScreen} = useLoading()
-
-  document.addEventListener("DOMContentLoaded", toggleLoading)
-
-  if(loading){
-    return loadingScreen
-  }
   
   return (
     <BrowserRouter>
