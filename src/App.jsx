@@ -16,12 +16,14 @@ import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
 
 function App() {
 
-  const {loading, toggleLoading, loadingScreen} = useLoading()
+  const {loading, toggleLoading, loadingScreen, setLoading} = useLoading()
 
   useEffect(() => {
     const handleLoad = () => {
       toggleLoading()
     }
+
+    setTimeout
 
     window.addEventListener('load', handleLoad)
 
