@@ -1,6 +1,8 @@
 import './App.css'
-import useLoading from './hooks/useLoading'
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
+import useLoading from './hooks/useLoading'
 import Header from './components/header/Header'
 import NavBar from './components/NavBar/NavBar'
 import Index from './components/pages/Index'
@@ -10,8 +12,6 @@ import Collections from './components/pages/Collections'
 import Gallery from './components/pages/Gallery'
 import SignUp from './components/pages/SignUp'
 import Footer from './components/footer/Footer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
 
 
 function App() {

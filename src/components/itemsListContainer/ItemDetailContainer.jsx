@@ -18,7 +18,7 @@ const ItemDetailContainer = ({img,img2, title, price, details, stock, toggleView
                 <div className='w-full flex flex-wrap gap-5 justify-evenly items-center mt-6'>
                     <p className='font-bold text-lg'>$ {price}</p>
                     {
-                        stock === 0 ? <p className='text-red-300 font-bold bg-[--black-600] py-1 px-3 rounded-3xl'>No Stock</p> :
+                        stock === 0 ? <button className='text-red-300 font-bold bg-black bg-opacity-30 w-[140px] h-[40px] rounded-3xl pointer-events-none'>No Stock</button> :
 
                         <button className="CartBtn flex w-[140px] h-[40px] rounded-full border-none bg-black bg-opacity-30 items-center justify-center cursor-pointer transition duration-500 overflow-hidden shadow-sm  transform animate-[cartBtn]">
                             <span className="IconContainer absolute left-[-50px] w-[30px] h-[30px] bg-transparent rounded-[50%] text-[--black-50] flex items-center justify-center overflow-hidden duration-500"> 

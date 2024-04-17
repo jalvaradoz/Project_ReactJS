@@ -1,5 +1,4 @@
 import React from 'react'
-import CancelButton from '../../buttons/CancelButton'
 
 const UserOverlay = ({toggle}) => {
     return (
@@ -17,7 +16,7 @@ const UserOverlay = ({toggle}) => {
                             <label htmlFor="password" className="absolute top-[.4rem] left-3 text-lg">Password</label>
                         </div>
                         <button className="text-xl mainBtn" type="button" id="loginButton">Login</button>
-                        <CancelButton logic={toggle} title={'Close'}/>
+                        <button type="button" className="cancelBtn rounded-3xl" onClick={toggle}><span className="text">Close</span><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
                         <div className="flex flex-col items-center">
                             <p className="text-[.8rem] mb-3 text-[--black-50]">Don't have an account yet?</p>
                             <a href="" className="text-sm text-blue-400 hover:text-blue-700">Sign Up</a>

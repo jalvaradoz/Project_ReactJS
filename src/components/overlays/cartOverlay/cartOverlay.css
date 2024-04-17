@@ -10,21 +10,6 @@
 #cartOverlay #cart h2{
     font-family: var(--cursive);
 }
-#cartOverlay #cart .mainBtn{
-    width: 180px;
-    height: 50px;
-}
-#cartOverlay #cart .cancelBtn{
-    width: 180px;
-    height: 50px;
-}
-#cartOverlay #cart .cancelBtn:hover .icon{
-    transform: translateX(0);
-}
-#cartOverlay #cart .cancelBtn .icon{
-    transform: translateX(50px) translateY(0);
-
-}
 @keyframes cartAnimation {
     0%{right: -100%;}
     100%{right:0;}

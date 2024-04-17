@@ -88,7 +88,7 @@ body{
     transition-duration: 1s;
     overflow: hidden;
 }
-.mainBtn:focus{
+.mainBtn:focus {
     outline: 2px solid var(--black-950);
 }
 .mainBtn::before {
@@ -109,13 +109,14 @@ body{
     background-position: right;
     transition-duration: 1s;
 }
-.mainBtn:hover::before{
+.mainBtn:hover::before {
     background-position: right;
     transition-duration: 1s;
 }
 .mainBtn:active {
     transform: scale(.8);
 }
+
 .cancelBtn {
     width: 200px;
     height: 40px;
@@ -127,7 +128,8 @@ body{
     border-radius: 1.5rem;
     transition: 200ms;
 }
-.cancelBtn span{
+.cancelBtn span {
+    font-size: 1.2rem;
     transition: 200ms;
 }
 .cancelBtn .icon {
@@ -143,28 +145,43 @@ body{
     width: 15px;
     fill: var(--black-50);
 }
-.cancelBtn:hover .text{
+.cancelBtn:hover .text {
     color: transparent;
 }
-.cancelBtn:hover .text .icon{
+.cancelBtn:hover .icon {
     transform: translateX(0);
 }
 .cancelBtn:focus {
     outline: none;
 }
-.cancelBtn:active .icon svg{
+.cancelBtn:active .icon svg {
     transform: scale(0.8);
 }
+
 .logoutBtn {
     width: 120px;
 }
-.logoutBtn .icon{
+.logoutBtn .icon {
     transform: translateX(40px) translateY(0px);
 }
-.logoutBtn svg{
+.logoutBtn svg {
     width: 12px;
 }
+#cartOverlay #cart .mainBtn{
+    width: 180px;
+    height: 50px;
+}
+#cartOverlay #cart .cancelBtn{
+    width: 180px;
+    height: 50px;
+}
+#cartOverlay #cart .cancelBtn:hover .icon{
+    transform: translateX(0);
+}
+#cartOverlay #cart .cancelBtn .icon{
+    transform: translateX(50px) translateY(0);
 
+}
 
 /*-----form overlay------------------*/
 
