@@ -29,7 +29,7 @@ const useLoading = ()=>{
                                 </div>
                             </div>
 
-    return { loading, toggleLoading, loadingScreen, setLoading}
+    return { loading, toggleLoading, loadingScreen}
 }
 
 export default useLoading
