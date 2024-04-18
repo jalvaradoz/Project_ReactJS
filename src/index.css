@@ -190,7 +190,6 @@ body{
     animation: overAnimation .3s linear;
 }
 .logFormContainer {
-    background-color: var(--black-900);
     animation: formAnimation .3s linear;
 }
 @keyframes overAnimation {
