@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const SignUp = () => {
     return (
-        <>
+        <motion.div
+        initial={{opacity:0, scale:.3, transition:{duration:.2}}} 
+        animate={{opacity:1, scale:1, transition:{duration:1}}} 
+        exit={{opacity:0, transition:{duration:.5}}}
+        >
             <div className="pl-3 mt-20">
                 <h1 className="text-3xl md:text-6xl title">Sign Up</h1>
             </div>
@@ -47,7 +52,7 @@ const SignUp = () => {
                     </form>
                 </div>
             </section>
-        </>
+        </motion.div>
     )
 }
 

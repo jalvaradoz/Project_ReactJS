@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import PromoBanner from '../banners/PromoBanner'
 import MainBanners from '../banners/MainBanners'
 import MidTitles from '../midTitles/MidTitles'
@@ -8,7 +9,11 @@ import MainNavigationBtn from '../buttons/MainNavigationBtn'
 const Index = () => {
 
     return (
-        <>
+        <motion.div
+            initial={{opacity:0, scale:.3, transition:{duration:.2}}} 
+            animate={{opacity:1, scale:1, transition:{duration:1}}} 
+            exit={{opacity:0, transition:{duration:.5}}}
+        >
             <PromoBanner />
             <MidTitles midTitle={'Top sellers'}/>
                 <ItemsListContainer category={'topSellers'} />
@@ -27,7 +32,7 @@ const Index = () => {
                 <MainBanners src={'img/banners/vampireMain.webp'} alt={'vampireCollection'}/>
                 <ItemsListContainer category={'topVampire'} />
             <MainNavigationBtn nav={'/collections/vampire'} />
-        </>
+        </motion.div>
     )
 }
 
