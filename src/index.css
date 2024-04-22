@@ -31,7 +31,7 @@
     /* --Box Shadow, Light: */
     --box-white:0px 0px 20px 5px #00000059;
 
-    --transition-theme: background .5s ease-in-out, color .5s ease-in-out;
+    --transition-theme: background 1s ease, color .5s ease;
 }
 
 .dark{
@@ -311,9 +311,6 @@ body{
 
 /*--------------- Products ---------------*/
 
-
-
-
 .bin-button {
     display: flex;
     flex-direction: column;
@@ -358,4 +355,39 @@ body{
     border: 1px solid rgb(118, 118, 118);
     border-radius: 2px;
     padding: 1px 2px;
+}
+
+/*---------------Custom ---------------*/
+
+.alertButton {
+    padding-block: 7px;
+    padding-inline: 20px;
+    border-radius: 2rem;
+    margin-inline: 1rem;
+    outline: none;
+    color: var(--black-50);
+    background-color: var(--black-600);
+    transition: all .3s ease-in-out;
+}
+
+.alertButton:hover {
+    transform: scale(1.1);
+    background-color: var(--black-950);
+}
+
+.alertButton:active {
+    transform: scale(.8);
+}
+
+.denyButton {
+    background-color: #c41b1b9c;
+}
+
+.denyButton:hover {
+    transform: scale(1.1);
+    background-color: #c41b1b;
+}
+
+.denyButton:active {
+    transform: scale(.8);
 }

@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
 import useLoading from './hooks/useLoading'
+import { CartProvider } from './context/CartContext'
+import { AlertProvider } from './context/SweetAlert'
 import AnimatedRoutes from './components/pages/AnimatedRoutes'
 import Header from './components/header/Header'
 import NavBar from './components/NavBar/NavBar'
@@ -44,10 +46,14 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Header />
-      <NavBar />
-        <AnimatedRoutes />
-      <Footer />
+      <AlertProvider>
+        <CartProvider>
+          <Header />
+          <NavBar />
+            <AnimatedRoutes />
+          <Footer />
+        </CartProvider>
+      </AlertProvider>
     </BrowserRouter>
   )
 }

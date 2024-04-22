@@ -10,7 +10,7 @@ const ItemsListContainer = ({ category }) => {
         setProductsData(products)
     }, [])
 
-    const productsFiltered = productsData.filter(p => p.category.includes(category))
+    const productsFiltered = productsData.filter(item => item.category.includes(category))
 
     useEffect(() => {
         setLoadingError(productsFiltered.length === 0)
@@ -23,8 +23,8 @@ const ItemsListContainer = ({ category }) => {
     return (
         <div className="flex flex-wrap gap-16 justify-center items-center my-24 mx-7 max-w-full h-fit">
             {
-                productsFiltered.map(p=> (
-                    <Item src1={p.image1} src2={p.image2} title={p.name} price={p.price} key={p.id} details={p.description} stock={p.stock}/>
+                productsFiltered.map(product=> (
+                    <Item src1={product.image1} src2={product.image2} title={product.name} price={product.price} key={product.id} details={product.description} stock={product.stock} product={product}/>
                 ))
             }
         </div>
