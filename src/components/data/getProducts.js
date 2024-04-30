@@ -1,6 +1,5 @@
 const products = [
     {
-        id: 1001,
         name: "Artemis Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 0,
@@ -10,7 +9,6 @@ const products = [
         price: 3100,
     },
     {
-        id: 1002,
         name: "Olive Branch Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 50,
@@ -20,7 +18,6 @@ const products = [
         price: 2189,
     },
     {
-        id: 1003,
         name: "Portal Ring",
         description: "Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 100,
@@ -30,7 +27,6 @@ const products = [
         price: 11853,
     },
     {
-        id: 1004,
         name: "Zeus Ring",
         description: "Zeus ring is a part of antiquity inspired line THEA by Macabre Gadgets. Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity. Executed in a unique technique, combining the cutting edge and traditional materials, the ring becomes an ancient artefact achieved an effect of an antique marble statue. Entirely hand crafted in bonded white marble and inlayer with 24K gold plated sterling silver detail. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 5,
@@ -40,7 +36,6 @@ const products = [
         price: 4286,
     },
     {
-        id: 1005,
         name: "Black Corvus Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 15,
@@ -50,7 +45,6 @@ const products = [
         price: 2645,
     },
     {
-        id: 1006,
         name: "Apollo Ring",
         description: "Apollo ring is a part of antiquity inspired line THEA by Macabre Gadgets. Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity. Executed in a unique technique, combining the cutting edge and traditional materials, the ring becomes an ancient artefact achieved an effect of an antique marble statue. Entirely hand crafted in bonded white marble and inlayer with 24K gold plated sterling silver detail. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 6,
@@ -60,7 +54,6 @@ const products = [
         price: 1915,
     },
     {
-        id: 1007,
         name: "Capere Sidus Pendant",
         description: "Latin for 'to catch the star' , Uniting modernity and antiquity it is driven by outstanding Hellenistic, its sensuality, innocence and half mythical eternity. Executed in a unique technique, combining the cutting edge and traditional materials, the pendant becomes an ancient artefact achieved an effect of an antique marble statue. Entirely hand crafted in bonded white marble and combined with sterling silver details. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 10,
@@ -70,7 +63,6 @@ const products = [
         price: 4286,
     },
     {
-        id: 1008,
         name: "Coral Crown Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 50,
@@ -80,7 +72,6 @@ const products = [
         price: 4103,
     },
     {
-        id: 1009,
         name: "Crystal Crown Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 8,
@@ -90,7 +81,6 @@ const products = [
         price: 2645,
     },
     {
-        id: 1010,
         name: "Doe Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 2,
@@ -100,7 +90,6 @@ const products = [
         price: 8206,
     },
     {
-        id: 1011,
         name: "Crescent Oracle Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 7,
@@ -110,7 +99,6 @@ const products = [
         price: 3100,
     },
     {
-        id: 1012,
         name: "Roots Necklace",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 7,
@@ -120,7 +108,6 @@ const products = [
         price: 7021,
     },
     {
-        id: 1013,
         name: "Ionic Earring",
         description: "Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity. Executed in a unique technique, combining the cutting edge and traditional materials, the ring becomes an ancient artefact achieved an effect of an antique marble statue. Entirely hand crafted in bonded white marble and inlayer with oxidized sterling silver detail. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 80,
@@ -130,7 +117,6 @@ const products = [
         price: 2918,
     },
     {
-        id: 1014,
         name: "Flow Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 200,
@@ -140,7 +126,6 @@ const products = [
         price: 4559,
     },
     {
-        id: 1015,
         name: "Medea Ring",
         description: "Inspired by the glorious greek tragedy, Medea ring embodies the mystique and power associated with her name. Medea, a figure of Greek mythology, the granddaughter of the sun god Helios and a niece of sorceress Circe, a powerful witch herself and a mad hero of Euripides' play. This ring is a symbol of duality and incredible strength. Much like the character of Medea, it embodies both glorious strength and a hint of the macabre, the allure of the unknown and eerie. It's a reminder that even in complexity and darkness, there is beauty and strength to be celebrated.",
         stock: 60,
@@ -150,7 +135,6 @@ const products = [
         price: 11853,
     },
     {
-        id: 1016,
         name: "Pearl Snake Necklace",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 42,
@@ -160,7 +144,6 @@ const products = [
         price: 5836,
     },
     {
-        id: 1017,
         name: "Medusa Pendant",
         description: "Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity. Executed in a unique technique, combining the cutting edge and traditional materials, the pendant becomes an ancient artefact achieved an effect of an antique marble statue. Entirely hand crafted in bonded white marble and inlayed with 24K gold plated sterling silver detail. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 80,
@@ -170,7 +153,6 @@ const products = [
         price: 6656,
     },
     {
-        id: 1018,
         name: "Fan Coral Hairpin",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 180,
@@ -180,7 +162,6 @@ const products = [
         price: 3647,
     },
     {
-        id: 1019,
         name: "Nara Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 68,
@@ -190,7 +171,6 @@ const products = [
         price: 3832,
     },
     {
-        id: 1020,
         name: "Panther Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 72,
@@ -200,7 +180,6 @@ const products = [
         price: 4471.80,
     },
     {
-        id: 1021,
         name: "Pearl Crown Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 72,
@@ -210,7 +189,6 @@ const products = [
         price: 3741.60,
     },
     {
-        id: 1022,
         name: "Black Lyre Choker",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 72,
@@ -220,7 +198,6 @@ const products = [
         price: 5109,
     },
     {
-        id: 1023,
         name: "Arrow & Bow Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 10,
@@ -230,7 +207,6 @@ const products = [
         price: 3285,
     },
     {
-        id: 1024,
         name: "Cameo Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 10,
@@ -240,7 +216,6 @@ const products = [
         price: 7025,
     },
     {
-        id: 1025,
         name: "Mars Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 14,
@@ -250,7 +225,6 @@ const products = [
         price: 11039,
     },
     {
-        id: 1026,
         name: "Rose Skull Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 14,
@@ -260,7 +234,6 @@ const products = [
         price: 2920,
     },
     {
-        id: 1027,
         name: "Antler Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 50,
@@ -270,7 +243,6 @@ const products = [
         price: 3558,
     },
     {
-        id: 1028,
         name: "Ulmer Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 2,
@@ -280,7 +252,6 @@ const products = [
         price: 2646,
     },
     {
-        id: 1029,
         name: "Crowned hare Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 7,
@@ -290,7 +261,6 @@ const products = [
         price: 3376,
     },
     {
-        id: 1030,
         name: "Spire Pearl Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 1,
@@ -300,7 +270,6 @@ const products = [
         price: 1550,
     },
     {
-        id: 1031,
         name: "Corinth Pendant",
         description: "Corinth pendant is a part of antiquity inspired line THEA by Macabre Gadgets. Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity.",
         stock: 5,
@@ -310,7 +279,6 @@ const products = [
         price: 5011,
     },
     {
-        id: 1032,
         name: "Torso Pendant",
         description: "Torso pendant is a part of antiquity inspired line THEA by Macabre Gadgets. Uniting modernity and antiquity it is inspired by outstanding Hellenistic, its sensuality, innocence and half mythical eternity.",
         stock: 108,
@@ -320,7 +288,6 @@ const products = [
         price: 5011,
     },
     {
-        id: 1033,
         name: "Fascinus Pendant",
         description: "Fascinus - is the embodiment of the divine phallus - vital amulet and symbol of strength, protection and fertility used in Ancient Greece and Rome.  Crafted with meticulous attention to details, this pendant embodies enigmatic power of winged phallus. Translucent gold and silver wings are in contrast with marble's smooth texture.  Let it be a symbol of empowerment and freedom of self-expression, jewel that honors our ancient roots we are yet to rediscover.",
         stock: 200,
@@ -330,7 +297,6 @@ const products = [
         price: 3645,
     },
     {
-        id: 1034,
         name: "Twin Moon Crown",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 50,
@@ -340,7 +306,6 @@ const products = [
         price: 9100,
     },
     {
-        id: 1035,
         name: "Lion Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 58,
@@ -350,7 +315,6 @@ const products = [
         price: 3000,
     },
     {
-        id: 1036,
         name: "Pyramid Pearl Choker",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 58,
@@ -360,7 +324,6 @@ const products = [
         price: 7289.60,
     },
     {
-        id: 1037,
         name: "Ancient Skull Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 40,
@@ -370,7 +333,6 @@ const products = [
         price: 4586,
     },
     {
-        id: 1038,
         name: "Antler Body Chain",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 10,
@@ -380,7 +342,6 @@ const products = [
         price: 5687,
     },
     {
-        id: 1039,
         name: "Arche Ear Ruff",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan. No piercing required",
         stock: 5,
@@ -390,7 +351,6 @@ const products = [
         price: 2293,
     },
     {
-        id: 1040,
         name: "Avis Aeterna pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 23,
@@ -400,7 +360,6 @@ const products = [
         price: 6420,
     },
     {
-        id: 1041,
         name: "Crest Bracelet",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 29,
@@ -410,7 +369,6 @@ const products = [
         price: 1089.59,
     },
     {
-        id: 1042,
         name: "Dew Necklace",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 80,
@@ -420,7 +378,6 @@ const products = [
         price: 4494,
     },
     {
-        id: 1043,
         name: "Double Bracelet",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 80,
@@ -430,7 +387,6 @@ const products = [
         price: 4036,
     },
     {
-        id: 1044,
         name: "Forest Charms bondage",
         description: "Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 150,
@@ -440,7 +396,6 @@ const products = [
         price: 8255,
     },
     {
-        id: 1045,
         name: "Griffin Sabre Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 200,
@@ -450,7 +405,6 @@ const products = [
         price: 3119,
     },
     {
-        id: 1046,
         name: "Griffin pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 3,
@@ -460,7 +414,6 @@ const products = [
         price: 3210,
     },
     {
-        id: 1047,
         name: "Nara Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 18,
@@ -470,7 +423,6 @@ const products = [
         price: 4128,
     },
     {
-        id: 1048,
         name: "Olive Branch Hairpin",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 28,
@@ -480,7 +432,6 @@ const products = [
         price: 7337.52,
     },
     {
-        id: 1049,
         name: "Rose Quartz Flask charm",
         description: "Ancient Greek believed that perfume chases away evil spirits. For the sake of a talisman and a simple pleasure they used to carry perfumed oils in a precious jeweled bottles which became a fashionable accessory on its own. Get the feeling of having an eternal kind of a thing or simply always have a few drops of your favorite perfume with you!",
         stock: 36,
@@ -490,7 +441,6 @@ const products = [
         price: 7154,
     },
     {
-        id: 1050,
         name: "Snake & Butterflies Clutch",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 42,
@@ -500,7 +450,6 @@ const products = [
         price: 11044,
     },
     {
-        id: 1051,
         name: "Fox Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 33,
@@ -510,7 +459,6 @@ const products = [
         price: 5522,
     },
     {
-        id: 1052,
         name: "Hare Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 33,
@@ -520,7 +468,6 @@ const products = [
         price: 5522,
     },
     {
-        id: 1053,
         name: "Sleeping Bird Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 55,
@@ -530,7 +477,6 @@ const products = [
         price: 5522,
     },
     {
-        id: 1054,
         name: "Oracle Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 46,
@@ -540,7 +486,6 @@ const products = [
         price: 7363,
     },
     {
-        id: 1055,
         name: "Ouroboros Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 89,
@@ -550,7 +495,6 @@ const products = [
         price: 5799,
     },
     {
-        id: 1056,
         name: "Silver Chain Bondage",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 79,
@@ -560,7 +504,6 @@ const products = [
         price: 6811,
     },
     {
-        id: 1057,
         name: "Bondage Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 22,
@@ -570,7 +513,6 @@ const products = [
         price: 2393.78,
     },
     {
-        id: 1058,
         name: "Delos Necklace",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 22,
@@ -580,7 +522,6 @@ const products = [
         price: 4602,
     },
     {
-        id: 1059,
         name: "Golden Bra Bondage",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 30,
@@ -590,7 +531,6 @@ const products = [
         price: 6811,
     },
     {
-        id: 1060,
         name: "Laurel Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 60,
@@ -600,7 +540,6 @@ const products = [
         price: 3866,
     },
     {
-        id: 1061,
         name: "Shark Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 46,
@@ -610,7 +549,6 @@ const products = [
         price: 4898,
     },
     {
-        id: 1062,
         name: "Red Coral Hairpin",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 500,
@@ -620,7 +558,6 @@ const products = [
         price: 4898,
     },
     {
-        id: 1063,
         name: "Gills Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 253,
@@ -630,7 +567,6 @@ const products = [
         price: 5360,
     },
     {
-        id: 1064,
         name: "Pearl Veil",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 2,
@@ -640,7 +576,6 @@ const products = [
         price: 27721,
     },
     {
-        id: 1065,
         name: "Shell Hairpin",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 6,
@@ -650,7 +585,6 @@ const products = [
         price: 5545,
     },
     {
-        id: 1066,
         name: "Arch Crown Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 3,
@@ -660,7 +594,6 @@ const products = [
         price: 6931,
     },
     {
-        id: 1067,
         name: "Fern Skull Pendant",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 20,
@@ -670,7 +603,6 @@ const products = [
         price: 1755,
     },
     {
-        id: 1068,
         name: "Arche Skull Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 0,
@@ -680,7 +612,6 @@ const products = [
         price: 3789,
     },
     {
-        id: 1069,
         name: "Corax Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 20,
@@ -690,7 +621,6 @@ const products = [
         price: 2402,
     },
     {
-        id: 1070,
         name: "Sword Earring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 20,
@@ -700,7 +630,6 @@ const products = [
         price: 1570,
     },
     {
-        id: 1071,
         name: "Pinnacle Necklace",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 50,
@@ -710,7 +639,6 @@ const products = [
         price: 13853,
     },
     {
-        id: 1072,
         name: "Ancient Pearl Necklace ",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 30,
@@ -720,7 +648,6 @@ const products = [
         price: 2494,
     },
     {
-        id: 1073,
         name: "Armour Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 60,
@@ -730,7 +657,6 @@ const products = [
         price: 7019,
     },
     {
-        id: 1074,
         name: "Ram Ring",
         description: "This item is fully handcrafted using natural materials; it is not printed or automatically produced. Executed in a unique technique, combining the cutting edge and traditional materials. Any step of production process is environmentally friendly and all kinds of raw and supporting materials are vegan.",
         stock: 80,

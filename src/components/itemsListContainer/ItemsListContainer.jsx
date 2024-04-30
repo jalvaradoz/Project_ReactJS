@@ -1,22 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import products from '../data/getProducts'
+import React, { useEffect, useState} from 'react'
+import { collection, getDocs } from "firebase/firestore"
+import useLoading from '../../hooks/useLoading'
+import db from '../../db/db'
 import Item from './Item'
 
 const ItemsListContainer = ({ category }) => {
+
+    const {loading, toggleLoading, loadingScreen} = useLoading()
     const [productsData, setProductsData] = useState([])
     const [loadingError, setLoadingError] = useState(false)
 
-    useEffect(() => {
-        setProductsData(products)
-    }, [])
-
+    const getProducts = async()=>{
+        try {
+            const dataDb = await getDocs(collection(db, "products"))
+            const data = dataDb.docs.map((productDb)=>{
+                return { id: productDb.id, ...productDb.data() }
+            })
+            setProductsData(data)
+            toggleLoading()
+        } catch (error) {
+            console.error("Error fetching products:", error)
+            toggleLoading()
+            setLoadingError(true)
+        }
+    }
     const productsFiltered = productsData.filter(item => item.category.includes(category))
+
+    useEffect(() => {
+        getProducts()
+    }, [])
 
     useEffect(() => {
         setLoadingError(productsFiltered.length === 0)
     }, [category, productsData])
 
-    if (loadingError) {
+    if (loading) {
+        return loadingScreen
+    }else if (loadingError) {
         return <h2 className='text-center text-5xl text-red-500 my-12'>Error Loading products, please refresh</h2>
     }
 

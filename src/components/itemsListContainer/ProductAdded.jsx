@@ -1,16 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 
-const ProductAdded = ({img,title,price, quantity, stock}) => {
+const ProductAdded = ({img,title,price, quantity, stock, id}) => {
+
+    const { updateProductQuantity,deleteProduct } = useContext(CartContext)
 
     const [itemQuantity, setItemQuantity] = useState(quantity)
 
-    const add = ()=>{
-        itemQuantity < stock && setItemQuantity(itemQuantity + 1)
-    }
-    const subtract = ()=>{
-        itemQuantity > 1 && setItemQuantity(itemQuantity -1)
-    }
+    const add = () => {
+        if (itemQuantity < stock) {
+            setItemQuantity(itemQuantity + 1);
+            updateProductQuantity(id, itemQuantity + 1);
+        }
+    };
+
+    const subtract = () => {
+        if (itemQuantity > 1) {
+            setItemQuantity(itemQuantity - 1);
+            updateProductQuantity(id, itemQuantity - 1);
+        }
+    };
 
     return (
         <div className="w-full bg-[--black-500] rounded-3xl relative p-5 father">
@@ -23,7 +33,7 @@ const ProductAdded = ({img,title,price, quantity, stock}) => {
             <p className="absolute left-[8.3rem] top-6 text-[--black-50] productTitle w-[160px]">{title}</p>
             <p className="absolute left-[8.3rem] bottom-6 text-[--black-50]">${price.toLocaleString('en-US')}</p>
             <p className="absolute left-[13rem] bottom-6 text-[--black-50]">Total ${(price*itemQuantity).toLocaleString('en-US')}</p>
-            <button className="bin-button absolute right-5 bottom-5">
+            <button onClick={()=> deleteProduct(id)} className="bin-button absolute right-5 bottom-5">
                 <svg className="bin-top" viewBox="0 0 39 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="5" x2="39" y2="5" stroke="white" strokeWidth="4"></line>
                     <line x1="12" y1="1.5" x2="26.0357" y2="1.5" stroke="white" strokeWidth="3"></line>

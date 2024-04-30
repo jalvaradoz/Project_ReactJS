@@ -44,16 +44,15 @@ const Item = ({src1, src2, title, price, details, stock, product}) => {
                     </div>
                 </div>
                 <h3 className="text-center mb-1">{title}</h3>
-                <p className="text-center"><span>$</span>{price.toLocaleString('en-US')}</p>
+                <p className="text-center"><span>$ </span>{price.toLocaleString('en-US')}</p>
                 <button onClick={toggleDetails} className='w-full mt-2 dark:text-blue-gray-300 dark:hover:text-blue-gray-600 text-light-blue-700 hover:text-light-blue-900 hover:scale-105 active:scale-90 duration-500 ease'>More Details</button>
             </div>
             <AnimatePresence>
                 {
-                    showDetails && (
+                    showDetails && 
                         <motion.div exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
                             <ItemDetailContainer img={src1} img2={src2} details={details} price={price} title={title} stock={stock} toggleView={toggleDetails} count={count} handleAddToCart={handleAddToCart} setCount={setCount} />
                         </motion.div>
-                    )
                 }
             </AnimatePresence>
         </div>

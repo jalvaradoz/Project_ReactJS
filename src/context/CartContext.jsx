@@ -1,5 +1,4 @@
-import { createContext, useState } from 'react'
-import { useContext } from 'react'
+import { createContext, useState, useContext } from 'react'
 import { SweetAlert } from './SweetAlert'
 
 const CartContext = createContext()
@@ -38,16 +37,38 @@ const CartProvider = ({children})=>{
     }
 
     const emptyCart = ()=>{
+        Toast.fire({icon: "info", title: 'Cart cleaned'})
         setCart([])
     }
 
-    const itemQuantity = () => {
-        return cart.reduce((totalQuantity, item) => totalQuantity + item.quantity, 0);
+    const deleteProduct = (id) =>{
+        const productFilter = cart.filter((productCart)=> productCart.id !== id)
+        Toast.fire({icon: "info", title: 'Product removed'})
+        setCart(productFilter)
     }
-    
+
+    const updateProductQuantity = (productId, newQuantity) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === productId ? { ...item, quantity: newQuantity } : item
+            )
+        )
+    }
+
+    const subTotal = ()=>{
+        const priceXquantity = cart.reduce((total, product)=> total + (product.quantity * product.price),0)
+        return priceXquantity
+    }
+
+    const total = ()=>{
+        const subTotalXTaxes = subTotal() * 1.16
+        return subTotalXTaxes
+    }
+
+    const itemQuantity = () =>  cart.reduce((totalQuantity, item) => totalQuantity + item.quantity, 0)
 
     return(
-        <CartContext.Provider value={{cart, addToCart, itemQuantity, emptyCart}}>
+        <CartContext.Provider value={{cart, addToCart, itemQuantity, emptyCart, deleteProduct, subTotal, updateProductQuantity, total}}>
             {children}
         </CartContext.Provider>
     )
