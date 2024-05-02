@@ -5,6 +5,7 @@ import { SweetAlert } from '../../context/SweetAlert'
 
 
 import { addDoc,collection } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import db from '../../db/db'
 import validateForm from '../../utils/validationYup'
@@ -62,6 +63,8 @@ const Checkout = () => {
             console.error('Order didn`t uploaded correctly',error)
         }
     }
+    
+    const navigate = useNavigate()
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
@@ -82,11 +85,12 @@ const Checkout = () => {
             })
             emptyCart()
             cleanForm()
+            navigate('/')
         } catch (error) {
             await Modal.fire({
                 title: 'Order failed',
                 text: 'We are sorry, it seems the database is unavailable',
-                icon: 'Error',
+                icon: 'error',
                 showCancelButton: false,
                 confirmButtonText: `Ok, I'll try again`
             })
