@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
+
 import CartWidget from "./CartWidget"
 import ThemeSwitch from "./ThemeSwitch"
 import UserWidget from "./UserWidget"
 import SearchWidget from "./SearchWidget"
-import { Link } from "react-router-dom"
+
 import './header.css'
 
 

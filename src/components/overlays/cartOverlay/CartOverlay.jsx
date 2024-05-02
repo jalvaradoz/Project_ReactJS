@@ -1,18 +1,12 @@
 import './cartOverlay.css'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../../context/CartContext'
-import { motion,AnimatePresence } from 'framer-motion'
 import ProductAdded from '../../itemsListContainer/ProductAdded'
-import Payment from '../payment/Payment'
+import { Link } from 'react-router-dom'
 
 const CartOverlay = ({toggleOverlay}) => {
 
     const { cart, emptyCart, subTotal } = useContext(CartContext)
-    const [paymentOverlay, setPaymentOverlay] = useState(false)
-
-    const togglePayment = ()=>{
-        setPaymentOverlay(!paymentOverlay)
-    }
 
     if(cart.length === 0){
         return(
@@ -56,23 +50,15 @@ const CartOverlay = ({toggleOverlay}) => {
                                 </div>
                             </div>
                             <div className="flex justify-evenly items-center w-full mb-10">
-                                <button onClick={togglePayment} type="button" className="mainBtn rounded-3xl p-3">
+                                <Link onClick={toggleOverlay} to={'/checkout'} className="mainBtn rounded-3xl p-3">
                                     Checkout
-                                </button>
+                                </Link>
                                 <button type="button" className="cancelBtn rounded-3xl" onClick={toggleOverlay}><span className="text">Close</span><span className="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
                             </div>
                         </section>
                     </div>
                 </div>
             </div>
-            <AnimatePresence>
-                {
-                    paymentOverlay &&
-                    <motion.div exit={{opacity:0}} transition={{duration:.3}}>
-                        <Payment toggle={togglePayment}/>
-                    </motion.div>
-                }
-            </AnimatePresence>
         </>
     )
 }

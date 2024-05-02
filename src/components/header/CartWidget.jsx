@@ -1,6 +1,8 @@
 import { useState,useContext } from "react"
+
 import { motion, AnimatePresence } from 'framer-motion'
 import { CartContext } from "../../context/CartContext"
+
 import CartOverlay from "../overlays/cartOverlay/CartOverlay"
 
 const CartWidget = () => {

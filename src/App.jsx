@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import ScrollToTop from './components/pages/RouterScrollLogic/ScrollToTop'
 import { CartProvider } from './context/CartContext'
 import { AlertProvider } from './context/SweetAlert'
+import { PayPalScriptProvider} from "@paypal/react-paypal-js"
 import AnimatedRoutes from './components/pages/AnimatedRoutes'
 import Header from './components/header/Header'
 import NavBar from './components/NavBar/NavBar'
@@ -18,7 +19,15 @@ function App() {
         <CartProvider>
           <Header />
           <NavBar />
-            <AnimatedRoutes />
+            <PayPalScriptProvider 
+              options={{
+                clientId: "AWUk5TEzVbBAYGmmVC1E2JGd2kW_ib4HwOFK-OGS-DAnuLx3idTaQENSvyebCc4v87jiegYM0eU6Lg8l",
+                currency: 'MXN',
+                locale: 'en_US',
+              }}
+              >
+              <AnimatedRoutes />
+            </PayPalScriptProvider>
           <Footer />
         </CartProvider>
       </AlertProvider>

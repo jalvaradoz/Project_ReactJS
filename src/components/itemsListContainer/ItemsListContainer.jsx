@@ -1,7 +1,9 @@
 import React, { useEffect, useState} from 'react'
+
 import { collection, getDocs } from "firebase/firestore"
-import useLoading from '../../hooks/useLoading'
 import db from '../../db/db'
+
+import useLoading from '../../hooks/useLoading'
 import Item from './Item'
 
 const ItemsListContainer = ({ category }) => {

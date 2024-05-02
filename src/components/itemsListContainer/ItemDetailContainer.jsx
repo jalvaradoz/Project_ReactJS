@@ -26,9 +26,9 @@ const ItemDetailContainer = ({img,img2, title, price, details, stock, toggleView
                 <div className='w-full flex flex-wrap gap-5 justify-around items-center mt-6'>
                     <p className='font-bold text-lg'>$ {price}</p>
                     <div className="flex items-center gap-3 w-fit rounded-full border-none bg-black bg-opacity-30 px-4 py-2">
-                        <button className="outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={subtract}>-</button>
+                        <button className="text-white outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={subtract}>-</button>
                         <span className="font-bold text-[--black-50]">{stock===0 ? stock : count}</span>
-                        <button className="outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={add}>+</button>
+                        <button className="text-white outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={add}>+</button>
                     </div>
 
                     {
