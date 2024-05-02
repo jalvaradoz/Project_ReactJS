@@ -48,7 +48,7 @@ const ProductAdded = ({img,title,price, quantity, stock, id}) => {
                     <span className="font-bold text-[--black-50]">{itemQuantity}</span>
                     <button className="text-[--black-50] outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={add}>+</button>
             </div>
-            <p className="absolute left-[8.3rem] top-4 text-[--black-50] productTitle w-[180px] overflow-hidden">{title}</p>
+            <p className="absolute left-[8.3rem] text-nowrap top-4 text-[--black-50] productTitle w-[180px] overflow-x-hidden">{title}</p>
             <p className="absolute left-[8.3rem] bottom-16 text-[--black-50]">${price.toLocaleString('en-US')}</p>
             <p className="absolute left-[13rem] bottom-16 text-[--black-50]">Total ${(price*itemQuantity).toLocaleString('en-US')}</p>
             

@@ -73,7 +73,7 @@ const Checkout = () => {
                 <div>
                     <p>Order Id: ${orderID}</p>
                     <p>Payment Id: ${paymentID}</p>
-                    <p>You paid: $${(order.total).toLocaleString('en-US')}</p>
+                    <p>You paid: $ ${order.total}</p>
                 </div>
                 `,
                 icon: 'success',
