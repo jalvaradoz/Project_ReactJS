@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAmgChNMq0c117I0Ea3oFUqj7odSBgVPA0",
-    authDomain: "alter-jewelry.firebaseapp.com",
-    projectId: "alter-jewelry",
-    storageBucket: "alter-jewelry.appspot.com",
-    messagingSenderId: "261390137831",
-    appId: "1:261390137831:web:b544fe60d26b5f72776542"
+    apiKey: import.meta.env.VITE_API_KEY_DB,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID
 }
 
 initializeApp(firebaseConfig)

@@ -21,7 +21,7 @@ function App() {
           <NavBar />
             <PayPalScriptProvider 
               options={{
-                clientId: "AWUk5TEzVbBAYGmmVC1E2JGd2kW_ib4HwOFK-OGS-DAnuLx3idTaQENSvyebCc4v87jiegYM0eU6Lg8l",
+                clientId: import.meta.env.VITE_CLIENT_ID,
                 currency: 'MXN',
                 locale: 'en_US',
               }}
