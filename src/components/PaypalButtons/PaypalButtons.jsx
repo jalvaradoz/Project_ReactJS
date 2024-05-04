@@ -59,7 +59,7 @@ const PaypalButtons = ({setSubmitButton, setPaymentID, orderForm, setOrderForm})
         onCancel={(data)=>{
             Modal.fire({
                 title: 'Transaction Canceled',
-                text: `Transaction ID: ${data.paymentID}, (no payment was processed)`,
+                text: `Transaction ID: ${data.orderID}, (no payment was processed)`,
                 icon: 'info',
                 showCancelButton: false,
             })
