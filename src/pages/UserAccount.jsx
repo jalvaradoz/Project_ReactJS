@@ -31,13 +31,30 @@ const UserAccount = () => {
             setErrorMsg('You already have that user name')
         }else{
             try {
-                await updateUserInfo(newUserName)
-                await Modal.fire({
-                    title: 'Name Changed successfully',
-                    icon: 'success',
-                    showCancelButton: false,
-                    confirmButtonText: `Great, thanks !`
+                const confirmChange = await Modal.fire({
+                    title: 'User name will be changed',
+                    text: `Your new user name will be '${newUserName}' , are you sure you want to change it?`,
+                    icon: 'warning',
                 })
+                if(confirmChange.isConfirmed){
+                    await updateUserInfo(newUserName)
+                    await Modal.fire({
+                        title: 'Name Changed successfully',
+                        icon: 'success',
+                        showCancelButton: false,
+                        confirmButtonText: `Great, thanks !`
+                    })
+                }else{
+                    await Modal.fire({
+                        title: 'Process canceled',
+                        icon: 'info',
+                        showCancelButton: false,
+                        showConfirmButton: false,
+                        timer: 1500,
+                        timerProgressBar: true,
+                    })
+                    return
+                }
             } catch (error) {
                 await Modal.fire({
                     title: 'Something happen',
@@ -72,7 +89,8 @@ const UserAccount = () => {
                     title: 'Process Canceled',
                     icon: 'info',
                     showCancelButton: false,
-                    timer: 2500,
+                    showConfirmButton: false,
+                    timer: 1500,
                     timerProgressBar: true,
                 })
             }

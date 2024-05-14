@@ -1,6 +1,7 @@
 import './App.css'
 
 import { BrowserRouter } from 'react-router-dom'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { PayPalScriptProvider} from "@paypal/react-paypal-js"
 
 import { CartProvider } from './context/CartContext'
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <SpeedInsights />
       <ScrollToTop />
       <AlertProvider>
         <AuthProvider>

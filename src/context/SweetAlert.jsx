@@ -8,7 +8,7 @@ const AlertProvider = ({children})=>{
     const Toast = Swal.mixin({
         customClass: {
             timerProgressBar: 'bg-[--black-400]',
-            popup: 'rounded-3xl mb-5 ml-1 shadow-[#0000009d] shadow-lg',
+            popup: 'rounded-3xl mb-5 ml-1 shadow-[#0000009d] shadow-lg text-sm md:text-base',
         },
         toast: true,
         position: "bottom-start",
