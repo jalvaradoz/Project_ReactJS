@@ -7,13 +7,14 @@ const AlertProvider = ({children})=>{
 
     const Toast = Swal.mixin({
         customClass: {
-            popup: 'rounded-3xl mb-5 ml-1',
+            timerProgressBar: 'bg-[--black-400]',
+            popup: 'rounded-3xl mb-5 ml-1 shadow-[#0000009d] shadow-lg',
         },
         toast: true,
         position: "bottom-start",
         showConfirmButton: false,
-        background: "#4f4f4f",
-        color: "#f6f6f6",
+        background: "var(--black-800)",
+        color: "var(--black-50)",
         padding: '20px 20px 20px 20px',
         timer: 3000,
         timerProgressBar: true,
@@ -25,13 +26,16 @@ const AlertProvider = ({children})=>{
     
     const Modal = Swal.mixin({
         customClass: {
+            timerProgressBar: 'bg-[--black-400]',
             confirmButton: "alertButton",
             cancelButton: "alertButton denyButton",
-            popup: 'rounded-3xl',
+            popup: 'rounded-3xl shadow-[#0000009d] shadow-lg',
+            input: 'h-[40px] rounded-3xl bg-[--black-400] p-1 pl-4',
+            inputLabel: 'text-lg',
         },
         buttonsStyling: false,
-        background: "#454545",
-        color: "#f6f6f6",
+        background: "var(--black-700)",
+        color: "var(--black-50)",
         showCancelButton: true,
         confirmButtonText: "Accept",
         cancelButtonText: "Deny",

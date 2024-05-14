@@ -1,22 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 
 import { CartContext } from '../context/CartContext'
 import { SweetAlert } from '../context/SweetAlert'
-
+import { userAuth } from '../context/AuthContext'
 
 import { addDoc,collection } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet'
-import db from '../db/db'
-import validateForm from '../utils/validationYup'
+import { db } from '../db/db'
+import { validateForm } from '../utils/validationYup'
 
 import PaypalButtons from '../components/PaypalButtons/PaypalButtons'
 
 const Checkout = () => {
 
-    const {itemQuantity, total, subTotal, cart, emptyCart} = useContext(CartContext)
+    const { itemQuantity, total, subTotal, cart, emptyCart } = useContext(CartContext)
     const { Modal } = useContext(SweetAlert)
+    const { currentUser,userLoggedIn } = useContext(userAuth)
 
     const [submitButton, setSubmitButton] = useState(false)
     const [formValidated, setFormValidated] = useState(false)
@@ -29,6 +30,16 @@ const Checkout = () => {
         phone: '',
         email: '',
     })
+
+    useEffect(() => {
+        if(userLoggedIn){
+            setOrderForm({
+                name: currentUser.displayName,
+                phone: '',
+                email: currentUser.email,
+            });
+        }
+    }, [userLoggedIn]);    
 
     const handleChangeInput = (event)=>{
         setOrderForm({...orderForm, [event.target.name] : event.target.value})
@@ -90,7 +101,7 @@ const Checkout = () => {
         } catch (error) {
             await Modal.fire({
                 title: 'Order failed',
-                text: 'We are sorry, it seems the database is unavailable',
+                text: 'We are sorry, it seems the database is unavailable, please hit submit order again',
                 icon: 'error',
                 showCancelButton: false,
                 confirmButtonText: `Ok, I'll try again`

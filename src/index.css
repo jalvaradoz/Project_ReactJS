@@ -118,7 +118,7 @@ body{
 }
 
 .cancelBtn {
-    width: 200px;
+    width: fit-content;
     height: 40px;
     display: flex;
     color: var(--black-50);
@@ -133,6 +133,7 @@ body{
     transition: 200ms;
 }
 .cancelBtn .icon {
+    opacity: 0;
     position: absolute;
     transform: translateX(50px) translateY(.5px);
     height: 40px;
@@ -149,6 +150,7 @@ body{
     color: transparent;
 }
 .cancelBtn:hover .icon {
+    opacity: 1;
     transform: translateX(0);
 }
 .cancelBtn:focus {
@@ -384,4 +386,12 @@ body{
 
 .denyButton:active {
     transform: scale(.8);
+}
+
+@keyframes marquee {
+    0% {transform: translateX(10%);}
+    100% {transform: translateX(-140%);}
+}
+.animate-marquee {
+    animation: marquee 10s linear;
 }

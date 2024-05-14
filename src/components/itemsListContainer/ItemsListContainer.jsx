@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react'
 
 import { collection, getDocs } from "firebase/firestore"
-import db from '../../db/db'
+import { db } from '../../db/db'
 
 import useLoading from '../../hooks/useLoading'
 import Item from './Item'

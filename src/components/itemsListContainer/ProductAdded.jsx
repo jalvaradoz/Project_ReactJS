@@ -28,7 +28,7 @@ const ProductAdded = ({img,title,price, quantity, stock, id}) => {
             <div className="flex items-center gap-3 w-fit rounded-full border-none bg-black bg-opacity-30 px-3 py-2 absolute right-3 md:right-5 bottom-2">
                 {
                     quantity > 1 ? 
-                    <button className="text-[--black-50] outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={subtract}>-</button> :
+                    <button className="text-[--black-50] outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem] hover:bg-[--black-600] duration-200 active:scale-90" onClick={subtract}>-</button> :
 
                     <button onClick={()=> deleteProduct(id)} className="bin-button w-[26px] h-[26px]">
                         <svg className="bin-top w-[12px]" viewBox="0 0 39 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const ProductAdded = ({img,title,price, quantity, stock, id}) => {
                     </button>
                 }
                     <span className="font-bold text-[--black-50]">{itemQuantity}</span>
-                    <button className="text-[--black-50] outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem]" onClick={add}>+</button>
+                    <button className="text-[--black-50] outline outline-1 outline-white h-[22px] rounded-3xl px-[.29rem] hover:bg-[--black-600] duration-200 active:scale-90" onClick={add}>+</button>
             </div>
             <p className="absolute left-[8.3rem] text-nowrap top-4 text-[--black-50] productTitle w-[180px] overflow-x-hidden">{title}</p>
             <p className="absolute left-[8.3rem] bottom-16 text-[--black-50]">${price.toLocaleString('en-US')}</p>

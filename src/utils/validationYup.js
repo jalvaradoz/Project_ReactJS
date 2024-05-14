@@ -1,4 +1,4 @@
-import { object, string, number, date } from 'yup';
+import { object, string, number } from 'yup';
 
 let userSchema = object({
     email: string().email().required(),
@@ -6,7 +6,7 @@ let userSchema = object({
     name: string().required(),
 })
 
-const validateForm = async(orderForm)=>{
+export const validateForm = async(orderForm)=>{
     try {
         await userSchema.validate(orderForm)
         return { status: 'Success' }
@@ -15,4 +15,20 @@ const validateForm = async(orderForm)=>{
     }
 }
 
-export default validateForm
+
+let signUpSchema = object({
+    userName: string().required().lowercase().trim(),
+    password: string().required().min(8, 'password must be at least 8 characters long').max(16, 'password can`t be larger than 16 characters').trim(),
+    confirmedPassword: string().required().min(8, 'password must be at least 8 characters long').max(16, 'password can`t be larger than 16 characters'),
+    email: string().required(),
+    confirmedEmail: string().required(),
+})
+
+export const validateSignUpForm = async(signForm)=>{
+    try {
+        await signUpSchema.validate(signForm)
+        return { status: 'Success' }
+    } catch (error) {
+        return{ status: 'Error', error: error.message }
+    }
+}

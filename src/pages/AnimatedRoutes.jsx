@@ -9,6 +9,7 @@ import Contact from './Contact'
 import Collections from './Collections'
 import Gallery from './Gallery'
 import SignUp from './SignUp'
+import UserAccount from './UserAccount'
 import Checkout from './Checkout'
 
 const AnimatedRoutes = () => {
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
                 <Route path='/about-us' element={<AboutUs />}/>
                 <Route path='/contact' element={<Contact />}/>
                 <Route path='/gallery' element={<Gallery />}/>
+                <Route path='/:userParam' element={<UserAccount />}/>
                 <Route path='/sign-up' element={<SignUp />}/> 
                 <Route path='/checkout' element={<Checkout />}/>          
             </Routes>
