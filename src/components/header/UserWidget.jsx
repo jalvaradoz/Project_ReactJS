@@ -70,8 +70,8 @@ const UserWidget = () => {
                             {
                                 userImage ? 
 
-                                <button className="absolute top-[14px] right-[73px]">
-                                    <img className='w-[45px] rounded-3xl' src={userImage} alt="" />
+                                <button className="absolute top-[15px] md:top-[14px] right-[60px] md:right-[73px]">
+                                    <img className='w-[45px] rounded-3xl' src={userImage} alt="userImage" />
                                 </button> :
 
                                 <button onClick={toggleOverlay} className="userIcon absolute">
