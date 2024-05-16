@@ -6,9 +6,9 @@ import { db } from '../../db/db'
 import useLoading from '../../hooks/useLoading'
 import Item from './Item'
 
-const ItemsListContainer = ({ category }) => {
+const ItemsListContainer = ({ category,searchInput}) => {
 
-    const {loading, toggleLoading, loadingScreen} = useLoading()
+    const { loading, toggleLoading, loadingScreen } = useLoading()
     const [productsData, setProductsData] = useState([])
     const [loadingError, setLoadingError] = useState(false)
 
@@ -26,20 +26,22 @@ const ItemsListContainer = ({ category }) => {
             setLoadingError(true)
         }
     }
-    const productsFiltered = productsData.filter(item => item.category.includes(category))
+
+    const productsFiltered = productsData.filter(item => ( searchInput && searchInput === '' || searchInput && item.name.includes(searchInput.toLowerCase()) || searchInput && item.category.includes(searchInput.toLowerCase())) || item.category.includes(category))
 
     useEffect(() => {
         getProducts()
     }, [])
 
     useEffect(() => {
-        setLoadingError(productsFiltered.length === 0)
-    }, [category, productsData])
+        const hasError = (category !== '' || searchInput !== '') && productsFiltered.length === 0
+        setLoadingError(hasError)
+    }, [category, searchInput, productsData])
 
     if (loading) {
         return loadingScreen
     }else if (loadingError) {
-        return <h2 className='text-center text-5xl text-red-500 my-12'>Error Loading products, please refresh</h2>
+        return <h2 className='text-center text-2xl text-red-500 my-12'>No products were found</h2>
     }
 
     return (
@@ -50,7 +52,7 @@ const ItemsListContainer = ({ category }) => {
                 ))
             }
         </div>
-    );
+    )
 }
 
 export default ItemsListContainer
