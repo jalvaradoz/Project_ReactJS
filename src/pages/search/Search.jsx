@@ -2,15 +2,57 @@ import React, { useEffect, useState } from 'react'
 
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet'
+import { collection, getDocs } from 'firebase/firestore'
+
+import { db } from '../../db/db'
 
 import Checkboxes from './Checkboxes'
-import ItemsListContainer from '../../components/itemsListContainer/ItemsListContainer'
+import Item from '../../components/itemsListContainer/Item'
 
 const Search = () => {
 
     const [searchCriteria, setSearchCriteria] = useState('')
     const [searchInput, setSearchInput] = useState('')
     const [loadingError, setLoadingError] = useState(false)
+    const [productsResult, setProductsResult] = useState([])
+    const [filteredProducts, setFilteredProducts] = useState([])
+
+    useEffect(() => {
+        const getSearchProducts = async()=>{
+            try {
+                const dataDb = await getDocs(collection(db, "products"))
+                const data = dataDb.docs.map((productDb)=>{
+                    return { id: productDb.id, ...productDb.data() }
+                })
+                setProductsResult(data)
+                setFilteredProducts(data)
+            } catch (error) {
+                console.error("Error fetching products:", error)
+                setLoadingError(true)
+            }
+        }
+
+        getSearchProducts()
+    }, [])
+
+    useEffect(() => {
+        let filtered = productsResult
+
+        if (searchCriteria) {
+            filtered = filtered.filter(product => 
+                product.category.map(cat => cat.toLowerCase()).includes(searchCriteria.toLowerCase())
+            )
+        }
+
+        if (searchInput) {
+            filtered = filtered.filter(product => 
+                product.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                product.category.some(cat => cat.toLowerCase().includes(searchInput.toLowerCase()))
+            )
+        }
+
+        setFilteredProducts(filtered)
+    }, [searchCriteria, searchInput, productsResult])
 
     const handleCheckboxChange = (name) => {
         setSearchCriteria(prevCriteria => prevCriteria === name ? '' : name)
@@ -18,10 +60,6 @@ const Search = () => {
     
     const handleSearchInputChange = (e) => {
         setSearchInput(e.target.value)
-    }
-
-    const handleLoadingError = (error) => {
-        setLoadingError(error)
     }
 
     useEffect(() => {
@@ -69,15 +107,25 @@ const Search = () => {
                         </div>
                     </div>
                 </div>
+                <div className="flex flex-wrap gap-16 justify-center items-center my-24 mx-7 max-w-full h-fit">
                 {
-                    loadingError ? 
-                    
-                    (<h2 className='text-center text-2xl text-red-500 my-12'>No items were found with your search criteria</h2>)    
-                    
-                    : 
+                        loadingError ? 
 
-                    (<ItemsListContainer category={searchCriteria} searchInput={searchInput} onLoadingError={handleLoadingError} />)
-                }
+                        <h2 className='text-center text-2xl text-red-500 my-12'>Error Loading products</h2>
+
+                        :
+
+                        filteredProducts.length > 0 ? 
+
+                        filteredProducts.map(product=> (
+                            <Item src1={product.image1} src2={product.image2} title={product.name} price={product.price} key={product.id} details={product.description} stock={product.stock} product={product}/>
+                        ))
+
+                        :
+
+                        <h2 className='text-center text-2xl text-gray-500 my-12'>No products found</h2>
+                    }
+                </div>
             </motion.div>
         </>
     )

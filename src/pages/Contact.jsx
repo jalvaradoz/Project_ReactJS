@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet'
 
 const Contact = () => {
+
+    const [status, setSetStatus] = useState("")
+
+    const onSubmit = async (event) => {
+        event.preventDefault()
+        setStatus("Sending....")
+        const formData = new FormData(event.target)
+    
+        formData.append("access_key", "ad3b27e7-8676-4841-90e8-664c83b23fc0")
+    
+        const object = Object.fromEntries(formData)
+        const json = JSON.stringify(object)
+    
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        }).then((res) => res.json())
+    
+        if (res.success) {
+            console.log("Success", res)
+        }
+    }
+
+
     return (
         <>
             <Helmet>
@@ -19,7 +47,7 @@ const Contact = () => {
                     <h1 className="text-3xl md:text-6xl lg:text-7xl title ml-10">Contact</h1>
                     <section className="my-16 flex justify-center max-w-full">
                         <div className="bg-[--black-800] p-10 rounded-3xl w-[90%] max-w-full">
-                            <form action="">
+                            <form onSubmit={onSubmit}>
                                 <div className="flex flex-col gap-10">
                                     <div className="logContainer relative">
                                         <input className="w-full h-[40px] rounded-3xl bg-[--black-400] p-1 pl-4" type="text" id="name" name="name" required autoComplete="name" />
